@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Farhan Yahya Hadil</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .bg-grid {
+            background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-slate-900">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-emerald-400 flex items-center gap-2">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+                <span>Farhan Hadil</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-emerald-400 transition-colors" data-lang-id="nav-about">Tentang Saya</a>
+                <a href="#skills" class="hover:text-emerald-400 transition-colors" data-lang-id="nav-skills">Keahlian</a>
+                <a href="#projects" class="hover:text-emerald-400 transition-colors" data-lang-id="nav-projects">Proyek</a>
+                <a href="#contact" class="hover:text-emerald-400 transition-colors" data-lang-id="nav-contact">Kontak</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <!-- Toggle Switch Bahasa (ID / EN) -->
+                <button id="langToggleBtn" onclick="toggleLanguage()" class="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 text-xs font-semibold rounded-lg transition-all">
+                    <i data-lucide="globe" class="w-4 h-4 text-emerald-400"></i>
+                    <span id="currentLangLabel">ID | EN</span>
+                </button>
+                
+                <a href="#contact" class="hidden sm:inline-block px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-semibold rounded-lg text-sm transition-colors" data-lang-id="btn-contact-top">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-6 bg-grid relative overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 rounded-full text-xs font-medium">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span data-lang-id="hero-badge">Business Information Technology Student</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                Farhan Yahya Hadil
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto" data-lang-id="hero-desc">
+                Undergraduate Business Information Technology Student at Bina Nusantara University (School of Information Systems).
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#projects" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl transition-all shadow-lg shadow-emerald-500/20" data-lang-id="btn-view-projects">
+                    Lihat Proyek
+                </a>
+                <a href="https://www.linkedin.com/in/farhan-hadil-357778437" target="_blank" class="px-6 py-3 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold rounded-xl transition-all flex items-center gap-2">
+                    LinkedIn <i data-lucide="external-link" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya Section -->
+    <section id="about" class="py-20 px-6 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <i data-lucide="user" class="w-8 h-8 text-emerald-400"></i>
+                <h2 class="text-3xl font-bold text-white" data-lang-id="about-title">Tentang Saya</h2>
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col md:flex-row items-center gap-8">
+                <!-- Foto Profil -->
+                <div class="relative shrink-0">
+                    <div class="w-44 h-52 md:w-48 md:h-56 rounded-2xl overflow-hidden border-2 border-emerald-500/40 shadow-xl shadow-emerald-500/10">
+                        <img src="FotoPARHAN.png" alt="Farhan Yahya Hadil" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-slate-950 p-2 rounded-xl shadow-md">
+                        <i data-lucide="check-circle" class="w-5 h-5"></i>
+                    </div>
+                </div>
+
+                <!-- Teks Deskripsi -->
+                <div class="space-y-4 text-slate-300 leading-relaxed text-sm md:text-base">
+                    <p data-lang-id="about-p1">
+                        Saya adalah mahasiswa <strong>Business Information Technology</strong> di <strong>Bina Nusantara University (School of Information Systems)</strong>. Memiliki minat mendalam pada pengembangan sistem informasi, perancangan antarmuka aplikasi, serta analisis kebutuhan bisnis dan integrasi teknologi.
+                    </p>
+                    <p data-lang-id="about-p2">
+                        Dalam alur kerja pengembangan web dan sistem, saya berfokus pada efisiensi logika bisnis, pengalaman pengguna (UX) yang intuitif, serta pemanfaatan tools AI modern untuk mempercepat proses pembuatan dan pengujian perangkat lunak.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alat & Keahlian Section -->
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <i data-lucide="wrench" class="w-8 h-8 text-emerald-400"></i>
+                <h2 class="text-3xl font-bold text-white" data-lang-id="skills-title">Alat & Keahlian</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Front-End -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-emerald-500/50 transition-all">
+                    <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-4">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2" data-lang-id="skill-frontend-title">Front-End Development</h3>
+                    <p class="text-slate-400 text-sm mb-4" data-lang-id="skill-frontend-desc">Pengembangan antarmuka web yang responsif dan terstruktur.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">HTML5</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">CSS3</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Back-End & DB -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-emerald-500/50 transition-all">
+                    <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-4">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2" data-lang-id="skill-backend-title">Back-End & System</h3>
+                    <p class="text-slate-400 text-sm mb-4" data-lang-id="skill-backend-desc">Pengolahan logika sistem backend dan manajemen basis data.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">PHP</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">MySQL</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">Escrow Logic</span>
+                    </div>
+                </div>
+
+                <!-- Business & Tools -->
+                <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl hover:border-emerald-500/50 transition-all">
+                    <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 mb-4">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2" data-lang-id="skill-tools-title">Business & Tools</h3>
+                    <p class="text-slate-400 text-sm mb-4" data-lang-id="skill-tools-desc">Perancangan proses bisnis, prototyping, dan integrasi AI.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">Figma</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-lg border border-slate-700">System Analysis</span>
+                        <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-lg border border-emerald-500/30">AI Assisted</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek Saya Section -->
+    <section id="projects" class="py-20 px-6 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-3 mb-8">
+                <i data-lucide="folder-git-2" class="w-8 h-8 text-emerald-400"></i>
+                <h2 class="text-3xl font-bold text-white" data-lang-id="projects-title">Proyek Saya</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- TitipGo Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">Jastip Platform</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">TitipGo</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-lang-id="project-titipgo-desc">
+                            Platform jasa titip (Jastip) berbasis traveler dengan sistem pembayaran Escrow (Rekber), verifikasi KYC, QC Room, serta manajemen rute bagi traveler.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span data-lang-id="project-titipgo-f1">Dompet Escrow & Keamanan</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span data-lang-id="project-titipgo-f2">Verifikasi KYC & QC Room</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span data-lang-id="project-titipgo-f3">Jastip Plus & Rute Traveler</span></li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-950/50 border-t border-slate-800/80">
+                        <span class="text-xs text-slate-400">PHP, MySQL, CSS3, JS</span>
+                    </div>
+                </div>
+
+                <!-- EcoHub Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-semibold rounded-full border border-emerald-500/20">Eco-Tech</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">EcoHub</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-lang-id="project-ecohub-desc">
+                            Platform pengelolaan sampah dan daur ulang dengan fitur barter barang bekas, kuis lingkungan berhadiah, dan Admin Panel.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span data-lang-id="project-ecohub-f1">Fitur Barter Barang Bekas</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span data-lang-id="project-ecohub-f2">Tantangan & Point Reward</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i> <span data-lang-id="project-ecohub-f3">Peta Pengumpulan & Admin Panel</span></li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-950/50 border-t border-slate-800/80">
+                        <span class="text-xs text-slate-400">PHP, MySQL, JS, CSS</span>
+                    </div>
+                </div>
+
+                <!-- KenanginKopi Card -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/20">POS & Cafe System</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">KenanginKopi</h3>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed" data-lang-id="project-kenangin-desc">
+                            Sistem pemesanan dan pembayaran cafe terintegrasi untuk pengelolaan stok, transaksi interaktif, dan laporan operasional.
+                        </p>
+                        <ul class="text-xs text-slate-300 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> <span data-lang-id="project-kenangin-f1">Pemesanan Menu Interaktif</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> <span data-lang-id="project-kenangin-f2">Manajemen Multi-Cabang</span></li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400"></i> <span data-lang-id="project-kenangin-f3">Dashboard Stok & Laporan</span></li>
+                        </ul>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-950/50 border-t border-slate-800/80">
+                        <span class="text-xs text-slate-400">PHP, MySQL, JS, CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="space-y-3">
+                <h2 class="text-3xl font-bold text-white" data-lang-id="contact-title">Hubungi Saya</h2>
+                <p class="text-slate-400 max-w-xl mx-auto text-sm" data-lang-id="contact-subtitle">
+                    Silakan hubungi saya melalui email, WhatsApp, GitHub, atau LinkedIn untuk berdiskusi seputar peluang proyek, kolaborasi, maupun magang.
+                </p>
+            </div>
+
+            <!-- Grid Kontak Lengkap -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <!-- Email -->
+                <a href="mailto:farhanhadil03@gmail.com" class="px-5 py-3.5 bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold rounded-xl transition-all flex items-center justify-center gap-3 shadow-lg shadow-emerald-500/10">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    <span>Email</span>
+                </a>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/6285117517067" target="_blank" class="px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-emerald-400 border border-slate-800 font-semibold rounded-xl transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/farhanhadil03-rgb" target="_blank" class="px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold rounded-xl transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                    <span>GitHub</span>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/farhan-hadil-357778437" target="_blank" class="px-5 py-3.5 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 font-semibold rounded-xl transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="linkedin" class="w-5 h-5 text-blue-400"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-800 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Farhan Yahya Hadil. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Switch Bahasa & Lucide Icons -->
+    <script>
+        // Dictionary Bahasa (Indonesia & Inggris)
+        const translations = {
+            id: {
+                "nav-about": "Tentang Saya",
+                "nav-skills": "Keahlian",
+                "nav-projects": "Proyek",
+                "nav-contact": "Kontak",
+                "btn-contact-top": "Hubungi Saya",
+                "hero-badge": "Mahasiswa Business Information Technology",
+                "hero-desc": "Undergraduate Business Information Technology Student at Bina Nusantara University (School of Information Systems).",
+                "btn-view-projects": "Lihat Proyek",
+                "about-title": "Tentang Saya",
+                "about-p1": "Saya adalah mahasiswa <strong>Business Information Technology</strong> di <strong>Bina Nusantara University (School of Information Systems)</strong>. Memiliki minat mendalam pada pengembangan sistem informasi, perancangan antarmuka aplikasi, serta analisis kebutuhan bisnis dan integrasi teknologi.",
+                "about-p2": "Dalam alur kerja pengembangan web dan sistem, saya berfokus pada efisiensi logika bisnis, pengalaman pengguna (UX) yang intuitif, serta pemanfaatan tools AI modern untuk mempercepat proses pembuatan dan pengujian perangkat lunak.",
+                "skills-title": "Alat & Keahlian",
+                "skill-frontend-title": "Front-End Development",
+                "skill-frontend-desc": "Pengembangan antarmuka web yang responsif dan terstruktur.",
+                "skill-backend-title": "Back-End & System",
+                "skill-backend-desc": "Pengolahan logika sistem backend dan manajemen basis data.",
+                "skill-tools-title": "Business & Tools",
+                "skill-tools-desc": "Perancangan proses bisnis, prototyping, dan integrasi AI.",
+                "projects-title": "Proyek Saya",
+                "project-titipgo-desc": "Platform jasa titip (Jastip) berbasis traveler dengan sistem pembayaran Escrow (Rekber), verifikasi KYC, QC Room, serta manajemen rute bagi traveler.",
+                "project-titipgo-f1": "Dompet Escrow & Keamanan",
+                "project-titipgo-f2": "Verifikasi KYC & QC Room",
+                "project-titipgo-f3": "Jastip Plus & Rute Traveler",
+                "project-ecohub-desc": "Platform pengelolaan sampah dan daur ulang dengan fitur barter barang bekas, kuis lingkungan berhadiah, dan Admin Panel.",
+                "project-ecohub-f1": "Fitur Barter Barang Bekas",
+                "project-ecohub-f2": "Tantangan & Point Reward",
+                "project-ecohub-f3": "Peta Pengumpulan & Admin Panel",
+                "project-kenangin-desc": "Sistem pemesanan dan pembayaran cafe terintegrasi untuk pengelolaan stok, transaksi interaktif, dan laporan operasional.",
+                "project-kenangin-f1": "Pemesanan Menu Interaktif",
+                "project-kenangin-f2": "Manajemen Multi-Cabang",
+                "project-kenangin-f3": "Dashboard Stok & Laporan",
+                "contact-title": "Hubungi Saya",
+                "contact-subtitle": "Silakan hubungi saya melalui email, WhatsApp, GitHub, atau LinkedIn untuk berdiskusi seputar peluang proyek, kolaborasi, maupun magang."
+            },
+            en: {
+                "nav-about": "About Me",
+                "nav-skills": "Skills",
+                "nav-projects": "Projects",
+                "nav-contact": "Contact",
+                "btn-contact-top": "Contact Me",
+                "hero-badge": "Business Information Technology Student",
+                "hero-desc": "Undergraduate Business Information Technology Student at Bina Nusantara University (School of Information Systems).",
+                "btn-view-projects": "View Projects",
+                "about-title": "About Me",
+                "about-p1": "I am an undergraduate student in <strong>Business Information Technology</strong> at <strong>Bina Nusantara University (School of Information Systems)</strong>. I have a deep interest in information system development, application interface design, business needs analysis, and technology integration.",
+                "about-p2": "In my web and system development workflow, I focus on business logic efficiency, intuitive user experience (UX), and leveraging modern AI tools to accelerate software development and testing.",
+                "skills-title": "Tools & Skills",
+                "skill-frontend-title": "Front-End Development",
+                "skill-frontend-desc": "Building responsive and structured web interfaces.",
+                "skill-backend-title": "Back-End & System",
+                "skill-backend-desc": "Handling backend system logic and database management.",
+                "skill-tools-title": "Business & Tools",
+                "skill-tools-desc": "Business process design, prototyping, and AI integration.",
+                "projects-title": "My Projects",
+                "project-titipgo-desc": "Traveler-based personal shopper platform (Jastip) featuring Escrow payment, KYC verification, QC Room, and traveler route management.",
+                "project-titipgo-f1": "Escrow Wallet & Security",
+                "project-titipgo-f2": "KYC Verification & QC Room",
+                "project-titipgo-f3": "Jastip Plus & Traveler Routes",
+                "project-ecohub-desc": "Waste management and recycling platform with second-hand barter features, environmental reward challenges, and Admin Panel.",
+                "project-ecohub-f1": "Second-hand Barter System",
+                "project-ecohub-f2": "Challenges & Point Rewards",
+                "project-ecohub-f3": "Collection Map & Admin Panel",
+                "project-kenangin-desc": "Integrated cafe ordering and POS payment system for multi-branch stock management, interactive ordering, and operational reports.",
+                "project-kenangin-f1": "Interactive Menu Ordering",
+                "project-kenangin-f2": "Multi-branch Management",
+                "project-kenangin-f3": "Stock Dashboard & Reports",
+                "contact-title": "Contact Me",
+                "contact-subtitle": "Feel free to reach out via Email, WhatsApp, GitHub, or LinkedIn to discuss project opportunities, collaborations, or internships."
+            }
+        };
+
+        let currentLang = 'id';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'id' ? 'en' : 'id';
+            document.getElementById('currentLangLabel').innerText = currentLang === 'id' ? 'ID | EN' : 'EN | ID';
+            
+            const langData = translations[currentLang];
+            document.querySelectorAll('[data-lang-id]').forEach(el => {
+                const key = el.getAttribute('data-lang-id');
+                if (langData[key]) {
+                    el.innerHTML = langData[key];
+                }
+            });
+        }
+
+        lucide.createIcons();
+    </script>
+</body>
+</html>
